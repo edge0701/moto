@@ -386,6 +386,7 @@ class ResourceMap(collections.Mapping):
             "AWS::StackId": stack_id,
             "AWS::StackName": stack_name,
             "AWS::URLSuffix": "amazonaws.com",
+            "AWS::Partition": "aws",
             "AWS::NoValue": None,
         }
 
