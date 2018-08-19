@@ -138,7 +138,7 @@ class convert_flask_to_httpretty_response(object):
 
         result = self.callback(request, request.url, {})
         # result is a status, headers, response tuple
-        if len(result) == 3:
+        if result and len(result) == 3:
             status, headers, content = result
         else:
             status, headers, content = 200, {}, result

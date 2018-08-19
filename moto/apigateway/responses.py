@@ -140,6 +140,7 @@ class APIGatewayResponse(BaseResponse):
         url_path_parts = self.path.split("/")
         function_id = url_path_parts[2]
         stage_name = url_path_parts[4]
+        stage_response = ''
 
         if self.method == 'GET':
             try:
