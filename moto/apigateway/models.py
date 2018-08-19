@@ -160,7 +160,9 @@ class Resource(BaseModel):
         return integration
 
     def get_integration(self, method_type):
-        return self.resource_methods[method_type]['methodIntegration']
+        method = self.resource_methods[method_type]
+        if 'methodIntegration' in method:
+            return method['methodIntegration']
 
     def delete_integration(self, method_type):
         return self.resource_methods[method_type].pop('methodIntegration')
